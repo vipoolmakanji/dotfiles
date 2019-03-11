@@ -30,6 +30,8 @@ main() {
 
     install_npm_package "!nstant-markdown-d" "instant-markdown-d"
 
+    # change permissions on node_modules dir
+    # sudo chmod 777 /usr/local/lib/node_modules
 }
 
 main
