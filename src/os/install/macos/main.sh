@@ -8,20 +8,24 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 ./xcode.sh
 ./homebrew.sh
-./bash.sh
+#./bash.sh
 ./../nvm.sh
+./git.sh
 
 ./browsers.sh
+./communication.sh
 ./compression_tools.sh
-./git.sh
+
 ./gpg.sh
-./image_tools.sh
 ./misc.sh
 ./misc_tools.sh
 ./../npm.sh
-./tmux.sh
-./video_tools.sh
+#./tmux.sh
+#./video_tools.sh
+./system_utils.sh
+./text_editors.sh
+#./php.sh
+./database.sh
 ./../vim.sh
-./web_font_tools.sh
-
+./../zsh.sh
 ./cleanup.sh
