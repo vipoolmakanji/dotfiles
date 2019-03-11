@@ -55,7 +55,9 @@ execute() {
 
     local -r CMDS="$1"
     local -r MSG="${2:-$1}"
+    local -r DATE_TIME=$(date '+%Y-%m-%d %H:%M:%S');
     local -r TMP_FILE="$(mktemp /tmp/XXXXX)"
+    local -r OUTPUT_LOG="/tmp/setup-output"
 
     local exitCode=0
     local cmdsPID=""
@@ -71,11 +73,13 @@ execute() {
 
     # Execute commands in background
 
-    eval "$CMDS" \
-        &> /dev/null \
-        2> "$TMP_FILE" &
+    echo -e "
 
-    cmdsPID=$!
+-----------------------------------
+-> [$DATE_TIME] $CMDS
+" >> $OUTPUT_LOG
+
+    eval "$CMDS" >> $OUTPUT_LOG 2> "$TMP_FILE" & cmdsPID=$!
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -100,6 +104,7 @@ execute() {
 
     if [ $exitCode -ne 0 ]; then
         print_error_stream < "$TMP_FILE"
+         cat "$TMP_FILE" >> $OUTPUT_LOG
     fi
 
     rm -rf "$TMP_FILE"
@@ -212,6 +217,10 @@ print_error_stream() {
 }
 
 print_in_color() {
+
+    local -r OUTPUT_STRING="$(tput setaf $2) $1 $(tput sgr0)"
+    printf "$OUTPUT_STRING" >> /tmp/setup-output
+    
     printf "%b" \
         "$(tput setaf "$2" 2> /dev/null)" \
         "$1" \
