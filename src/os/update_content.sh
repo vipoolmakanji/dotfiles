@@ -24,7 +24,8 @@ main() {
 
         git fetch --all 1> /dev/null \
             && git reset --hard origin/master 1> /dev/null \
-            && git clean -fd 1> /dev/null
+            && git clean -fd 1> /dev/null \
+            && git branch --set-upstream-to=origin/master master 1> /dev/null
 
         print_result $? "Update content"
 
