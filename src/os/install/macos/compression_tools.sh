@@ -8,5 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Compression Tools\n\n"
 
-brew_install "Brotli" "brotli"
-brew_install "Zopfli" "zopfli"
+brew_install "Unrar" "unrar"
