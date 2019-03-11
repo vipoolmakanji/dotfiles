@@ -1,4 +1,4 @@
-# [Cătălin](https://github.com/alrra)’s dotfiles
+# [vipools](https://github.com/vipoolmakanji)’s dotfiles
 
 These are the base dotfiles that I start with when I set up a
 new environment. For more specific local needs I use the `.local`
@@ -30,8 +30,8 @@ understand [what it does][setup]. Seriously, **DON'T**!)
 
 | OS | Snippet |
 |:---|:---|
-| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/alrra/dotfiles/master/src/os/setup.sh)"` |
-| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/alrra/dotfiles/master/src/os/setup.sh)"` |
+| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/vipoolmakanji/dotfiles/master/src/os/setup.sh)"` |
+| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/vipoolmakanji/dotfiles/master/src/os/setup.sh)"` |
 
 That's it! :sparkles:
 
@@ -126,8 +126,8 @@ such as the `git` user credentials, e.g.:
 
 [user]
 
-    name = Cătălin Mariș
-    email = alrra@example.com
+    name = test test2
+    email = test@example.com
     signingkey = XXXXXXXX
 ```
 
@@ -226,7 +226,7 @@ The code is available under the [MIT license][license].
 [dotfiles mathias]: https://github.com/mathiasbynens/dotfiles
 [github mathias ]: https://github.com/mathiasbynens
 [license]: LICENSE.txt
-[setup line]: https://github.com/alrra/dotfiles/blob/1503cf23ef23f6e31342b140bcd246625160b94f/src/os/setup.sh#L3
+[setup line]: https://github.com/vipoolmakanji/dotfiles/blob/1503cf23ef23f6e31342b140bcd246625160b94f/src/os/setup.sh#L3
 [setup]: src/os/setup.sh
 [shell]: src/shell
 [symlink]: src/os/create_symbolic_links.sh
