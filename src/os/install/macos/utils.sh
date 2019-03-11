@@ -59,6 +59,11 @@ brew_install() {
         execute \
             "brew $CMD install $FORMULA $CMD_ARGUMENTS" \
             "$FORMULA_READABLE_NAME"
+
+        terminal-notifier \
+          -title "Brew $CMD Installer" \
+          -subtitle "$FORMULA_READABLE_NAME" \
+          -message "Installed"
     fi
 
 }
