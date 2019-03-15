@@ -30,10 +30,6 @@ install_homebrew() {
             "Install HomeBrew"
     fi
 
-    #print_result $? "Homebrew"
-
-    brew_install "Terminal Notifier" "terminal-notifier"
-
 }
 
 opt_out_of_analytics() {
