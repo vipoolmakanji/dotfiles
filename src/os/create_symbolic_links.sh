@@ -19,7 +19,8 @@ create_symlinks() {
 #        "shell/bash_prompt"
 #        "shell/bashrc"
 #        "shell/curlrc"
-        #"shell/inputrc"
+#        "shell/inputrc"
+        "shell/nanorc"
 
         "git/gitattributes"
         "git/gitconfig"
