@@ -56,11 +56,15 @@ main() {
 
     print_in_purple "\n   ZSH Setup\n\n"
 
-    "./$(get_os)/zsh.sh"
-    install_oh_my_zsh
-    install_powerlevel_9k_theme
-    install_powerline_fonts
-    link_custom_zshrc_file
+    ask_for_confirmation "Do you want to install/refresh ZSH and Oh-My-Zsh?"
+
+    if answer_is_yes; then
+      "./$(get_os)/zsh.sh"
+      install_oh_my_zsh
+      install_powerlevel_9k_theme
+      install_powerline_fonts
+      link_custom_zshrc_file
+    fi
 }
 
 main
