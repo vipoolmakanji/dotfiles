@@ -56,6 +56,15 @@ opt_out_of_analytics() {
 
 }
 
+install_brew_taps() {
+    execute \
+        'brew tap homebrew/cask' \
+        "Brew Tap - Cask"
+    execute \
+        'brew tap homebrew/cask-versions' \
+        "Brew Tap - Cask-Version"
+}
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
@@ -67,6 +76,7 @@ main() {
 
     brew_update
     brew_upgrade
+    install_brew_taps
 
 }
 
