@@ -8,8 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Communication Tools\n\n"
 
-brew_install "Skype" "skype" "caskroom/cask" "cask"
-brew_install "Slack" "slack" "caskroom/cask" "cask"
-brew_install "Zoom" "zoom" "caskroom/cask" "cask"
-brew_install "Blue Jeans" "blue-jeans" "caskroom/cask" "cask"
-brew_install "teamviewer" "teamviewer" "caskroom/cask" "cask"
+brew_install "Skype" "skype" "" "cask"
+brew_install "Slack" "slack" "" "cask"
+brew_install "Zoom" "zoom" "" "cask"
+brew_install "Blue Jeans" "blue-jeans" "" "cask"
+brew_install "teamviewer" "teamviewer" "" "cask"

@@ -8,7 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Database\n\n"
 
-brew_install "PgAdmin4" "pgadmin4" "caskroom/cask" "cask"
-brew_install "Sequel Pro" "sequel-pro" "caskroom/cask" "cask"
+brew_install "PgAdmin4" "pgadmin4" "" "cask"
+brew_install "Sequel Pro" "sequel-pro" "" "cask"
 
 #TODO - Need to install MYSQL database, and any others as well

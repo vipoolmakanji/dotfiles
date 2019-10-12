@@ -8,8 +8,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Communication Tools\n\n"
 
-#brew_install "teamviewer" "teamviewer" "caskroom/cask" "cask"
-
 #brew "httpd", restart_service: true
 brew "php", restart_service: true
 

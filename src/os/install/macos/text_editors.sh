@@ -8,7 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Text Editors\n\n"
 
-brew_install "Atom" "atom" "caskroom/cask" "cask"
-brew_install "Adobe Acrobat Reader" "adobe-acrobat-reader" "caskroom/cask" "cask"
-brew_install "Phpstorm" "phpstorm" "caskroom/cask" "cask"
-brew_install "Sublime Text Editor" "sublime-text" "caskroom/cask" "cask"
+brew_install "Atom" "atom" "" "cask"
+brew_install "Adobe Acrobat Reader" "adobe-acrobat-reader" "" "cask"
+brew_install "Phpstorm" "phpstorm" "" "cask"
+brew_install "Sublime Text Editor" "sublime-text" "" "cask"

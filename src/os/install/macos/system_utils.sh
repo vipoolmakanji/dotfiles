@@ -8,9 +8,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   System Utils\n\n"
 
-brew_install "Iterm2 Terminal" "iterm2" "caskroom/cask" "cask"
-brew_install "Magicprefs" "magicprefs" "caskroom/cask" "cask"
-brew_install "Hyperdock" "hyperdock" "caskroom/cask" "cask"
+brew_install "Iterm2 Terminal" "iterm2" "" "cask"
+brew_install "Magicprefs" "magicprefs" "" "cask"
+brew_install "Hyperdock" "hyperdock" "" "cask"
 
 brew_install "Ansible" "ansible"
 brew_install "Python" "python"
