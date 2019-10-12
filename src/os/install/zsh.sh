@@ -8,7 +8,7 @@ declare -r CURRENT_FOLDER=$(pwd)
 
 install_oh_my_zsh() {
 
-  declare -r OH_MY_ZSH='sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+  declare -r OH_MY_ZSH='sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended'
 
   execute \
       "$OH_MY_ZSH" \
