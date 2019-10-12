@@ -17,7 +17,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./compression_tools.sh
 
 ./gpg.sh
-./misc.sh
+./misc_applications.sh
 ./misc_tools.sh
 ./../npm.sh
 #./tmux.sh
