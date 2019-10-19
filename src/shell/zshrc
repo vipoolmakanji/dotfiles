@@ -62,6 +62,9 @@ plugins=(
   git
 )
 
+# Disable OMZ Magic Function to prevent auto escape of pasted string
+DISABLE_MAGIC_FUNCTIONS=true
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
