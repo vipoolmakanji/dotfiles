@@ -12,23 +12,8 @@ execute "defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool 
          defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true" \
     "Automatically open a new Finder window when a volume is mounted"
 
-execute "defaults write com.apple.finder _FXShowPosixPathInTitle -bool true" \
-    "Use full POSIX path as window title"
-
-execute "defaults write com.apple.finder DisableAllAnimations -bool true" \
-    "Disable all animations"
-
-execute "defaults write com.apple.finder WarnOnEmptyTrash -bool false" \
-    "Disable the warning before emptying the Trash"
-
-execute "defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'" \
-    "Search the current directory by default"
-
-execute "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false" \
-    "Disable warning when changing a file extension"
-
-execute "defaults write com.apple.finder FXPreferredViewStyle -string 'Nlsv'" \
-    "Use list view in all Finder windows by default"
+execute "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true" \
+    "Enable warning when changing a file extension"
 
 execute "defaults write com.apple.finder NewWindowTarget -string 'PfDe' && \
          defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/Desktop/'" \
@@ -45,6 +30,18 @@ execute "defaults write com.apple.finder ShowRecentTags -bool false" \
 
 execute "defaults write -g AppleShowAllExtensions -bool true" \
     "Show all filename extensions"
+
+execute "defaults write com.apple.Finder AppleShowAllFiles true" \
+    "Show all hidden files"
+
+execute "defaults write com.apple.finder ShowStatusBar -bool true" \
+    "Show status bar"
+
+execute "defaults write com.apple.finder ShowPathbar -bool true" \
+    "Show path bar"
+
+execute "defaults write com.apple.finder ShowSideBar -bool true" \
+    "Show side bar"
 
 execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:iconSize 72' ~/Library/Preferences/com.apple.finder.plist && \
          /usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:IconViewSettings:iconSize 72' ~/Library/Preferences/com.apple.finder.plist" \
