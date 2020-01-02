@@ -21,6 +21,7 @@ create_symlinks() {
 #        "shell/curlrc"
 #        "shell/inputrc"
         "shell/nanorc"
+        "shell/zsh"
 
         "git/gitattributes"
         "git/gitconfig"
