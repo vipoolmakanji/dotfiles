@@ -86,10 +86,9 @@ main() {
 
     if answer_is_yes; then
       install_xcode
+      set_xcode_developer_directory
+      agree_with_xcode_licence
     fi
-
-    set_xcode_developer_directory
-    agree_with_xcode_licence
 
 }
 
