@@ -30,13 +30,13 @@ install_oh_my_zsh() {
 update_oh_my_zsh() {
 
   execute \
-      "upgrade_oh_my_zsh" \
+      "env ZSH=$ZSH sh $ZSH/tools/upgrade.sh" \
       "Upgrade Oh-My-Zsh Framework"
 }
 
 install_or_update_powerlevel_9k_theme() {
 
-  declare -r OH_MY_ZSH_THEME_PATH=' ~/.oh-my-zsh/custom/themes/powerlevel9k'
+  declare -r OH_MY_ZSH_THEME_PATH="$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
   if [ ! -d "$OH_MY_ZSH_THEME_PATH" ]; then
       install_powerlevel_9k_theme $OH_MY_ZSH_THEME_PATH
