@@ -196,11 +196,28 @@ verify_os() {
 
 }
 
+verify_shell() {
+  local terminal_name=""
+
+  terminal_name=$(echo $TERM_PROGRAM)
+
+  if [ "$terminal_name" == "iTerm.app" ]; then
+
+    printf "Sorry, this script is intended to be executed in native OS Terminal, please exit iTerm"
+    return 1
+  fi
+
+  return 0
+}
+
 # ----------------------------------------------------------------------
 # | Main                                                               |
 # ----------------------------------------------------------------------
 
 main() {
+
+    verify_shell \
+        || exit 1
 
     # Ensure that the following actions
     # are made relative to this file's path.
