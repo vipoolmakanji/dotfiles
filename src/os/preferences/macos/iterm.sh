@@ -9,10 +9,11 @@ print_in_purple "\n   Iterm2\n\n"
 
 killall "iTerm2" &> /dev/null
 
-execute "ln -s $(cd ../../.. && pwd)/iterm-prefs $HOME/.iterm_prefs" \
+execute "rm -f $HOME/.iterm_prefs \
+            && ln -sf $(cd ../../.. && pwd)/iterm-prefs $HOME/.iterm_prefs" \
     "Link Custom Iterm prefs to local user dir"
 
 execute "cp $HOME/.iterm_prefs/com.googlecode.iterm2.plist $HOME/Library/Preferences/com.googlecode.iterm2.plist" \
-    "Link Custom Iterm prefs to local user dir"
+    "Copy Custom Iterm prefs to Iterms Preferences dir"
 
 Open -a iterm
