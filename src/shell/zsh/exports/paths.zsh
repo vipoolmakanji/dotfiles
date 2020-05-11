@@ -1,6 +1,7 @@
 
 export PATH="$(brew --prefix)/opt/apr/bin:$PATH"
 export PATH="$(brew --prefix)/opt/apr-util/bin:$PATH"
+export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 export PATH="$(brew --prefix)/opt/icu4c/bin:$PATH"
 export PATH="$(brew --prefix)/opt/icu4c/sbin:$PATH"
 export PATH="$(brew --prefix)/opt/libiconv/bin:$PATH"

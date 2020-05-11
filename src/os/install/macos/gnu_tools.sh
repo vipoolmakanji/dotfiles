@@ -10,6 +10,7 @@ print_in_purple "\n   GNU Tools\n\n"
 
 brew_install "GNU Core Utils" "coreutils"
 brew_install "Binutils" "binutils"
+brew_install "Curl" "curl"
 brew_install "Diffutils" "diffutils"
 brew_install "Ed" "ed"
 brew_install "Findutils" "findutils"
