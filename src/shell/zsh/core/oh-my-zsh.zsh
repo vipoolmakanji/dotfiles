@@ -60,6 +60,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  history
+  osx
+  colored-man-pages
+  colorize
+  docker
 )
 
 # Disable OMZ Magic Function to prevent auto escape of pasted string
