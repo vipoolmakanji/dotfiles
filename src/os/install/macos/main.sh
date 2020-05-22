@@ -29,4 +29,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./database.sh
 ./../vim.sh
 ./../zsh.sh
+./python.sh
 ./cleanup.sh
