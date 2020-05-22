@@ -94,6 +94,13 @@ link_custom_zshrc_file() {
       "ln -fs $(cd ../.. && pwd)/shell/zshrc $HOME/.zshrc" \
       "Symlink custom .zshrc: $HOME/.zshrc → $(cd ../.. && pwd)/shell/zshrc"
 }
+
+
+correct_user_permissions() {
+  execute \
+      "chmod -R 755 /usr/local/share/zsh" \
+      "Correct /usr/local/share/zsh permissions"
+}
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
@@ -108,6 +115,7 @@ main() {
       install_or_update_powerlevel_9k_theme
       install_powerline_fonts
       link_custom_zshrc_file
+      correct_user_permissions
     fi
 }
 
