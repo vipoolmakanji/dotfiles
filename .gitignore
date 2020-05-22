@@ -1,2 +1,3 @@
 src/vim/vim/pack/minpac/*
 src/powerline-fonts/*
+src/shell/zsh/functions/custom/*
