@@ -26,6 +26,7 @@ brew_install() {
     declare -r FORMULA="$2"
     declare -r FORMULA_READABLE_NAME="$1"
     declare -r TAP_VALUE="$3"
+    declare -r ASYNC_MODE="$6"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -56,9 +57,25 @@ brew_install() {
     if brew $CMD list "$FORMULA" &> /dev/null; then
         print_success "$FORMULA_READABLE_NAME"
     else
-        execute \
-            "brew $CMD install $FORMULA $CMD_ARGUMENTS" \
+        if [ -n "$ASYNC_MODE" ]; then
+          execute \
+            "osascript -e 'tell app \"Terminal\"
+                do script \"export HOMEBREW_NO_AUTO_UPDATE=1;
+                brew $CMD install $FORMULA $CMD_ARGUMENTS;
+                if [ \$? -ne 0 ]; then
+                    echo \\\"Failed to install $FORMULA_READABLE_NAME\\\"
+                else
+                    echo \\\"Install of $FORMULA_READABLE_NAME completed\\\"
+                    sleep 5;
+                    exit;
+                fi\"
+            end tell'" \
             "$FORMULA_READABLE_NAME"
+        else
+          execute \
+             "brew $CMD install $FORMULA $CMD_ARGUMENTS" \
+             "$FORMULA_READABLE_NAME"
+        fi
     fi
 
 }
