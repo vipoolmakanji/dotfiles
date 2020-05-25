@@ -1,18 +1,18 @@
 
-export PATH="$(brew --prefix)/opt/apr/bin:$PATH"
-export PATH="$(brew --prefix)/opt/apr-util/bin:$PATH"
+#export PATH="$(brew --prefix)/opt/apr/bin:$PATH"       #apache
+#export PATH="$(brew --prefix)/opt/apr-util/bin:$PATH"  #apache
 export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
-export PATH="$(brew --prefix)/opt/icu4c/bin:$PATH"
-export PATH="$(brew --prefix)/opt/icu4c/sbin:$PATH"
-export PATH="$(brew --prefix)/opt/libiconv/bin:$PATH"
-export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
+export PATH="$(brew --prefix)/opt/icu4c/bin:$PATH"      #ICU4C
+export PATH="$(brew --prefix)/opt/icu4c/sbin:$PATH"     #ICU4C
+#export PATH="$(brew --prefix)/opt/libiconv/bin:$PATH"
+#export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"     #Postgres C API library
 export PATH="$(brew --prefix)/opt/ncurses/bin:$PATH"
-export PATH="$(brew --prefix)/opt/openldap/bin:$PATH"
-export PATH="$(brew --prefix)/opt/openldap/sbin:$PATH"
+#export PATH="$(brew --prefix)/opt/openldap/bin:$PATH"
+#export PATH="$(brew --prefix)/opt/openldap/sbin:$PATH"
 export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
 export PATH="$(brew --prefix)/opt/sqlite/bin:$PATH"
 export PATH="$(brew --prefix)/sbin:$PATH"
-#export PATH="$(brew --prefix)/opt/binutils/bin:$PATH"
+#export PATH="$(brew --prefix)/opt/binutils/bin:$PATH"  #Clashes with PyEnv builds
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix)/opt/ed/libexec/gnubin:$PATH"
