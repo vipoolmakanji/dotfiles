@@ -65,6 +65,7 @@ plugins=(
   colored-man-pages
   colorize
   docker
+  docker-compose
 )
 
 # Disable OMZ Magic Function to prevent auto escape of pasted string
