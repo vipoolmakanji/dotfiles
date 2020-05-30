@@ -66,6 +66,7 @@ plugins=(
   colorize
   docker
   docker-compose
+  terraform
 )
 
 # Disable OMZ Magic Function to prevent auto escape of pasted string
