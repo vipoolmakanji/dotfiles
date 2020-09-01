@@ -187,8 +187,16 @@
     #     by the local ones
 
     path = ~/.gitconfig.local
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[pull]
+    # https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only
+    # Pull in Fast-Forward method only
+
+    ff = only
+
