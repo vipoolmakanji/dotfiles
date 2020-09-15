@@ -16,6 +16,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./communication.sh
 ./compression_tools.sh
 
+./android.sh
+
 ./gpg.sh
 ./gnu_tools.sh
 ./misc_applications.sh
