@@ -10,6 +10,7 @@ print_in_purple "\n   Miscellaneous\n\n"
 
 brew_install "Authy Authenticator" "authy" "" "cask" "" "async-install"
 brew_install "Cyberduck" "cyberduck" "" "cask" "" "async-install"
+brew_install "Caffeine" "caffeine" "" "cask" "" "async-install"
 brew_install "Daisydisk" "daisydisk" "" "cask" "" "async-install"
 brew_install "Docker" "docker" "" "cask" "" "async-install"
 brew_install "Dropbox" "dropbox" "" "cask" "" "async-install"
