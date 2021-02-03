@@ -19,6 +19,20 @@ create_bash_local() {
 
 }
 
+create_alias_local() {
+
+    declare -r FILE_PATH="$HOME/.alias.local"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    if [ ! -e "$FILE_PATH" ] || [ -z "$FILE_PATH" ]; then
+        printf "%s\n\n" "# Custom local aliases here" >> "$FILE_PATH"
+    fi
+
+    print_result $? "$FILE_PATH"
+
+}
+
 create_gitconfig_local() {
 
     declare -r FILE_PATH="$HOME/.gitconfig.local"
@@ -71,6 +85,7 @@ main() {
     #create_bash_local
     create_gitconfig_local
     create_vimrc_local
+    create_alias_local
 
 }
 
