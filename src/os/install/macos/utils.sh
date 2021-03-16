@@ -21,12 +21,12 @@ brew_cleanup() {
 
 brew_install() {
 
-    declare -r CMD="$4"
-    declare -r CMD_ARGUMENTS="$5"
-    declare -r FORMULA="$2"
     declare -r FORMULA_READABLE_NAME="$1"
-    declare -r TAP_VALUE="$3"
-    declare -r ASYNC_MODE="$6"
+    declare -r FORMULA="$2"
+    declare -r OPTIONS="$3"
+    declare -r TAP_VALUE="$4"
+    declare -r ASYNC_MODE="$5"
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -54,14 +54,14 @@ brew_install() {
     # Install the specified formula.
 
     # shellcheck disable=SC2086
-    if brew $CMD list "$FORMULA" &> /dev/null; then
+    if brew list "$FORMULA" &> /dev/null; then
         print_success "$FORMULA_READABLE_NAME"
     else
         if [ -n "$ASYNC_MODE" ]; then
           execute \
             "osascript -e 'tell app \"Terminal\"
                 do script \"export HOMEBREW_NO_AUTO_UPDATE=1;
-                brew $CMD install $FORMULA $CMD_ARGUMENTS;
+                brew install $OPTIONS $FORMULA;
                 if [ \$? -ne 0 ]; then
                     echo \\\"Failed to install $FORMULA_READABLE_NAME\\\"
                 else
@@ -73,7 +73,7 @@ brew_install() {
             "$FORMULA_READABLE_NAME"
         else
           execute \
-             "brew $CMD install $FORMULA $CMD_ARGUMENTS" \
+             "brew install $OPTIONS $FORMULA" \
              "$FORMULA_READABLE_NAME"
         fi
     fi
