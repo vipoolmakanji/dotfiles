@@ -14,15 +14,15 @@ execute \
   "brew install pyenv pyenv-virtualenv" \
   "Install PyEnv"
 
-if [ ! -d "$HOME/.pyenv/versions/3.7.2" ]; then
+if [ ! -d "$HOME/.pyenv/versions/3.10.0" ]; then
   execute \
-    "pyenv install -v 3.7.2" \
-    "Install Python 3.7.2"
+    "pyenv install -v 3.10.0" \
+    "Install Python 3.10.0"
 fi
 
 execute \
-  "pyenv global 3.7.2" \
-  "Activate Python 3.7.2"
+  "pyenv global 3.10.0" \
+  "Activate Python 3.10.0"
 
 execute \
   "open -a Terminal -n pip.sh" \
