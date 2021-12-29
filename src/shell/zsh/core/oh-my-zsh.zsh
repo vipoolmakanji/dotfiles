@@ -61,7 +61,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
   git
   history
-  osx
+  macos
   colored-man-pages
   colorize
   docker
