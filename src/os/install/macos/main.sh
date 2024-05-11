@@ -16,7 +16,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./communication.sh
 ./compression_tools.sh
 
-./android.sh
+# ./android.sh
 
 ./gpg.sh
 ./gnu_tools.sh
@@ -28,7 +28,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./system_utils.sh
 ./text_editors.sh
 #./php.sh
-./database.sh
+# ./database.sh
 ./../vim.sh
 ./../zsh.sh
 ./python.sh

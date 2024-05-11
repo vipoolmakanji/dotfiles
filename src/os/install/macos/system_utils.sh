@@ -10,7 +10,7 @@ print_in_purple "\n   System Utils\n\n"
 
 brew_install "Iterm2 Terminal" "iterm2" "--cask" "" "async-install"
 #brew_install "Magicprefs" "magicprefs" "--cask" "" "async-install"
-brew_install "Hyperdock" "hyperdock" "--cask" "" "async-install"
+# brew_install "Hyperdock" "hyperdock" "--cask" "" "async-install"
 
 #brew_install "Ansible" "ansible" # Need to use older versions which are provided by Pip
 brew_install "AWScli" "awscli"
